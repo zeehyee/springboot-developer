@@ -1,0 +1,30 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 84623960399-cutmek9t4jm4dm1d2g12jp0ilpiidngs.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+    defer-datasource-initialization: true
+
+  #datasource: #데이터베이스 정보 추가
+    #url: jdbc:h2:mem:testdb
+    #username: sa
+  h2: #H2 콘솔 활성화
+    console:
+      enabled: true
+
+jwt: # 발급자(issuer), 비밀키(secret_key) 필수 설정
+  issuer: ajufresh@gmail.com
+  secret_key: study-springboot
